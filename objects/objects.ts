@@ -46,23 +46,7 @@ function doubleCoord(point: Point): Point {
 //let age: MyNum = 4536;
 
 // Nested Objects
-// A function with a nested object type parameter
-const describePerson = (person: {
-  name: string;
-  age: number;
-  parentNames: {
-    mom: string;
-    dad: string;
-  }
-}) => {
-  return `Person: ${name},
-  Age: ${age},
-  Parents: ${parentNames.mom}, ${parentNames.dad}.`;
-}
-
-describePerson({name: 'Jimmy', age: 10, parents: {mom: 'Kim', dad: 'Steve'}});
-
-// More nested object
+// Function with a nested object
 type Song = {
   title: string;
   artist: string;
@@ -89,4 +73,6 @@ function printSong(song: Song) {
 }
 
 calculatePayout(song)
+const earnings = calculatePayout(song);
+console.log(earnings);
 printSong(song)

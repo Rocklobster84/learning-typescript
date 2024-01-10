@@ -9,15 +9,6 @@ var coord = { x: 34, y: 2 };
 function doubleCoord(point) {
     return { x: point.x * 2, y: point.y * 2 };
 }
-//Primitive type alias
-//type MyNum = number;
-//let age: MyNum = 4536;
-// Nested Objects
-// A function with a nested object type parameter
-var describePerson = function (person) {
-    return "Person: ".concat(name, ",\n  Age: ").concat(age, ",\n  Parents: ").concat(parentNames.mom, ", ").concat(parentNames.dad, ".");
-};
-describePerson({ name: 'Jimmy', age: 10, parents: { mom: 'Kim', dad: 'Steve' } });
 var song = {
     title: "Unchained Melody",
     artist: "Righteous Brothers",
@@ -35,4 +26,6 @@ function printSong(song) {
     console.log("".concat(song.title, " - ").concat(song.artist));
 }
 calculatePayout(song);
+var earnings = calculatePayout(song);
+console.log(earnings);
 printSong(song);
