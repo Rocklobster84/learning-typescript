@@ -41,3 +41,16 @@ function rando(num: number) {
 const add = (x: number, y: number): number => {
   return x + y;
 }
+
+// ANONYMOUS FUNCTIONS
+// Context removes the need to specify : string
+const colors = ["red", "orange", "yellow"];
+colors.map(color => {
+  return color.toUpperCase()
+})
+
+// VOID TYPE - Returns no value
+function pringTwice(msg: string): void {
+  console.log(msg);
+  console.log(msg);
+}
