@@ -33,9 +33,13 @@ printName({first: "Thomas", last: "Jenkins"});
 type Point = {
   x: number;
   y: number;
+  //? makes z and optional property
+  z?: number;
 };
 
 let coord: Point = { x: 34, y: 2 };
+// With optional z
+const myPoint: Point = { x: 1, y: 3, /*z: 9*/};
 
 function doubleCoord(point: Point): Point {
   return {x: point.x *2, y: point.y *2};
@@ -76,3 +80,19 @@ calculatePayout(song)
 const earnings = calculatePayout(song);
 console.log(earnings);
 printSong(song)
+
+//readonly - is a modifier in Typescript
+type User = {
+  readonly id: number,
+  username: string;
+}
+
+const user: User = {
+  // assigning initial value to id
+  id: 12454,
+  username: "catgurl"
+}
+
+console.log(user.id)
+//Can't change value because it is readonly
+user.id = 484950

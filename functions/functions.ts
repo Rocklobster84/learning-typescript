@@ -54,3 +54,17 @@ function pringTwice(msg: string): void {
   console.log(msg);
   console.log(msg);
 }
+
+// NEVER TYPE - Never finished executing
+// Functions that don't finish running
+// Function that throws an exception
+function makeError(msg: string): never {
+  throw new Error(msg)
+}
+
+function gameLoop(){
+  while(true){
+    console.log("GAME LOOP RUNNING!");
+  }
+}
+
