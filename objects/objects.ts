@@ -96,3 +96,36 @@ const user: User = {
 console.log(user.id)
 //Can't change value because it is readonly
 user.id = 484950
+
+// Intersection Type, multiple types combine by an &
+type Circle = {
+  radius: number;
+};
+
+type Colorful = {
+  color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "yellow:"
+};
+// Intersection with CatDog
+type Cat = {
+  numLives: number
+}
+type Dog = {
+  breed: string
+}
+// add a third type not yet declared
+type CatDog = Cat & Dog & {
+  age: number;
+}
+
+const christy: CatDog = {
+  numLives: 7,
+  breed: "Husky",
+  age: 9
+}
