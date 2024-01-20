@@ -23,12 +23,42 @@ printAge(23)
 printAge("87")
 
 // Type narrowing
-function calculateTax(price: number | string, tax: number):void{
+function calculateTax(price: number | string, tax: number):number{
   if(typeof price === "string"){
     price = parseFloat(price.replace("$",""))
   }
-    let finalPrice = price * tax
-   console.log(`The price is ${finalPrice}`)
-  }
+    return price * tax
+}
 
-  calculateTax("55", 7)
+console.log(calculateTax("55", 7))
+
+// Union Types and arrays
+const stuff: (number | string)[] = [1,2,3,"four"]
+
+const location: (Point | Loc)[] = []
+location.push({ lat: 3856782, long: 9883})
+
+
+//Literal types
+let zero: 0 = 0;
+// any number other than 0 will complain
+//zero = 2
+let hi: "hi" = "HI"
+
+//Combine literal types with union types
+let mood: "Happy" | "Sad" = "Happy";
+mood = "Sad";
+
+type DayOfWeek =
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday"
+  | "Sunday" | 0
+// No other value is allowed
+let today: DayOfWeek = "Monday"
+
+
+

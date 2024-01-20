@@ -13,7 +13,6 @@ function calculateTax(price, tax) {
     if (typeof price === "string") {
         price = parseFloat(price.replace("$", ""));
     }
-    var finalPrice = price * tax;
-    console.log("The price is ".concat(finalPrice));
+    return price * tax;
 }
-calculateTax("55", 7);
+console.log(calculateTax("55", 7));
