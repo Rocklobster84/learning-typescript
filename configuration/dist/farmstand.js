@@ -1,4 +1,4 @@
 "use strict";
-const printProductSummary = (product) => {
+const printProduct = (product) => {
     console.log(`${product.name} - ${product.price}`);
 };
